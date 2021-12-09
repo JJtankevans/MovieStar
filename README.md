@@ -1,6 +1,7 @@
 # MovieStar
     - This project was developed with PHP in a course in Udemy for practice.
-    - If you want to test it's necessary create the database, you can change the configs for your favorite database in the "db.php".
+    - If you want to test it's necessary create the database, you can change 
+    the configs for your favorite database in the "db.php".
 ## DataBase(to create tables if necessary)
     - CREATE DATABASE moviestar;
     - CREATE TABLE users(
