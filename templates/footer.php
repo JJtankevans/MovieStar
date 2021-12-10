@@ -5,10 +5,10 @@
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/JJtankevans"><i class="fab fa-github"></i></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/vitor-oliveira-siqueira/"><i class="fab fa-linkedin"></i></a>
                 </li>
             </ul>
         </div>
