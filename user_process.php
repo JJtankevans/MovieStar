@@ -47,7 +47,7 @@ if($type === "update") {
       // Checar se jpg
       if(in_array($image, $jpgArray)) {
 
-        $imageFile = imagecreatefromjpeg($image["tmp_name"]);
+        $imageFile = ImageCreateFromJpeg($image["tmp_name"]);
 
       // Imagem é png
       } else {
@@ -78,7 +78,7 @@ if($type === "update") {
   // Receber dados do post
   $password = filter_input(INPUT_POST, "password");
   $confirmpassword = filter_input(INPUT_POST, "confirmpassword");
-
+  
   // Resgata dados do usuário
   $userData = $userDao->verifyToken();
   
