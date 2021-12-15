@@ -43,14 +43,15 @@
         if($userData->id === $movie->users_id) {
             $userOwnsMovie = true;
         }
+
+        //Resgatar as reviews do filme
+        $alredyReviewd = $reviewDao->hasAlreadyReviewed($id, $userData->id);
     }
 
     //Resgatar as reviews do filme
     $movieReviews = $reviewDao->getMoviesReview($id);
 
-
-    //Resgatar as reviews do filme
-    $alredyReviewd = false;
+   
 ?>
 
 <div class="container-fluid" id="main-container">
