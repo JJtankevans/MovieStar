@@ -33,7 +33,7 @@
         }
 
         public function create(Review $review){
-            
+
             $stmt = $this->conn->prepare("INSERT INTO reviews (
                 rating, review, movies_id, users_id
               ) VALUES (
@@ -54,8 +54,37 @@
 
         public function getMoviesReview($id){
 
-        
+            $reviews = [];
+
+            $stmt = $this->conn->prepare("SELECT * FROM reviews WHERE movies_id = :movies_id");
+
+            $stmt->bindParam(":movies_id", $id);
+
+            $stmt->execute();
+
+            if($stmt->rowCount() > 0) {
+
+                $reviewsData = $stmt->fetchAll();
+
+                $userDao = new UserDao($this->conn, $this->url);
+
+                foreach($reviewsData as $review) {
+
+                    $reviewObject = $this->buildReview($review);
+
+                    // Chamar dados do usuário
+                    $user = $userDao->findById($reviewObject->users_id);
+
+                    $reviewObject->user = $user;
+
+                    $reviews[] = $reviewObject;
+                }
+
+            }
+
+            return $reviews;
         }
+        
         public function hasAlreadyReviewed($id, $userId){
 
         }
