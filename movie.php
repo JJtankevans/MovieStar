@@ -63,7 +63,7 @@
                 <span class="pipe"></span>
                 <span><?= $movie->category ?></span>
                 <span class="pipe"></span>
-                <span><i class="fas fa-star"></i> 9</span>
+                <span><i class="fas fa-star"></i> <?= $movie->rating ?></span>
             </p>
             <iframe src="<?= $movie->trailer ?>" width="560" height="315" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -109,7 +109,7 @@
             <?php endif; ?>
             <!-- Comentário -->
             <?php foreach($movieReviews as $review): ?>
-                <?php require_once("templates/user_review.php"); ?>
+                <?php require("templates/user_review.php"); ?>
             <?php endforeach; ?>
             <?php if(count($movieReviews) == 0): ?>
                 <p class="empty-list">Não há comentários para este filme ainda...</p>

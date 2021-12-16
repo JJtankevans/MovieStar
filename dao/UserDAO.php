@@ -169,6 +169,7 @@
         public function findById($id){
 
             if($id != ""){
+                
                 $stmt = $this->conn->prepare("SELECT * FROM users WHERE id = :id");
 
                 $stmt->bindParam(":id", $id);

@@ -8,6 +8,7 @@
         id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(100),
         lastname VARCHAR(200),
+        email VARCHAR(200),
         password VARCHAR(200),
         image VARCHAR(200),
         token VARCHAR(200),
